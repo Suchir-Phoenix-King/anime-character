@@ -1,0 +1,141 @@
+<style>
+    body {
+        background-color: lightgreen;
+    }
+    .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+    }
+
+    #navbar {
+        overflow: hidden;
+        background-color: mediumpurple;
+    }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+            #navbar a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            #navbar a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+
+    .content {
+        padding: 16px;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+        .sticky + .content {
+            padding-top: 60px;
+        }
+    #heading {
+        font-family: "Sofia", sans-serif;
+    }
+    .p {
+        background-color: plum;
+        border-color: mediumpurple;
+        border-radius: 8px;
+        border-width: 4px;
+        padding: 10px;
+    }
+    .dropbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+</style>
+<head>
+    <title>Creator Contact</title>
+    <link rel="icon" type="image/x-icon" href="zoro.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+    <center>
+    <h1 id="heading">Creator Contact</h1>
+        <hr style="border: 5px solid purple; width:25%"/>
+              <div id="navbar">
+                  <a href="index.html">About Me</a>
+                  <a href="extra.html">Rest of Crew!</a>
+                  <a class="active" href="aboutme.html">Creator Contact</a>
+              </div>
+                  <br /><br />
+                  <h3 class="p">Hello! I'm  AquariusX. If you wanna reach out to me, You have come to the right place!</h3>
+                  <br /><br />
+                  <div class="dropdown">
+                      <button class="dropbtn">Contact Medium</button>
+                      <div class="dropdown-content">
+                          <a href="https://discordapp.com/users/" target="_blank">Discord (itsaquariusx)</a>
+                          <a href="mailto:sbk270711b@gmail.com" target="_blank">Gmail</a>
+                          <a href="https://sites.google.com/deccan.edu.in/suchir---portfolio/suchirs-home-page" target="_blank">Website (i made when i was 9)</a>
+                      </div>
+                  </div>
+    </center>
+</body>
+<script>
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+</script>
